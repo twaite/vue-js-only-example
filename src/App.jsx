@@ -1,4 +1,5 @@
 import StyledButton from "./components/test";
+import ClassTestComponent from "./components/class-test.jsx";
 
 
 const App = {
@@ -8,6 +9,7 @@ const App = {
       <div id="app">
         <h1>Hello World</h1>
         <StyledButton>Test</StyledButton>
+        <ClassTestComponent></ClassTestComponent>
       </div>
     );
   },
