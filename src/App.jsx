@@ -1,16 +1,15 @@
 import StyledButton from "./components/test";
 import RestaurantsComponent from "./components/restaurants";
-
+import AppWrapper from "./components/app-wrapper";
 
 const App = {
   name: 'app',
   render() {
     return (
-      <div id="app">
-        <h1>Hello World</h1>
-        <StyledButton>Test</StyledButton>
+      <AppWrapper>
         <RestaurantsComponent></RestaurantsComponent>
-      </div>
+        <StyledButton>Test</StyledButton>
+      </AppWrapper>
     );
   },
 }
