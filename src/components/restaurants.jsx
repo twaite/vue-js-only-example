@@ -1,5 +1,24 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import styled from 'vue-styled-components';
+
+const cardSize= 200;
+
+const RestaurantContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+`;
+
+const StyledCard = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: ${cardSize}px;
+  width: ${cardSize}px;
+  overflow: hidden;
+  margin: 1em
+`;
 
 @Component()
 class RestaurantsComponent extends Vue {
@@ -10,11 +29,15 @@ class RestaurantsComponent extends Vue {
 
   render() {
     return (
-      <div>
+      <RestaurantContainer>
         {this.restaurants.map(restaurant => {
-          return <h3>{restaurant.name}</h3>
+          return (
+            <StyledCard>
+              <img src={restaurant.image} alt={restaurant.name} height={cardSize}/>
+            </StyledCard>
+          );
         })}
-      </div>
+      </RestaurantContainer>
     );
   }
 }
