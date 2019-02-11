@@ -3,14 +3,24 @@ import RestaurantsComponent from "./components/restaurants";
 import AppWrapper from "./components/app-wrapper";
 
 const App = {
-  name: 'app',
+  data() {
+    return {
+      test: () => {return <h3>test this pls</h3>},
+    }
+  },
   render() {
     return (
       <AppWrapper>
-        <RestaurantsComponent></RestaurantsComponent>
-        <StyledButton>Test</StyledButton>
+        <RestaurantsComponent trueRenderProp={this.test}></RestaurantsComponent>
+        <StyledButton onClick={() => this.myRenderProp()}>Test</StyledButton>
       </AppWrapper>
     );
+  },
+
+  methods: {
+    myRenderProp() {
+      console.log('test');
+    }
   },
 }
 
