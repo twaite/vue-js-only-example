@@ -11,20 +11,16 @@
     "vue": "^2.5.22",
     "vue-class-component": "^6.3.2",
     "vue-hooks": "^0.3.2",
-    "vue-property-decorator": "^7.0.0",
     "vue-styled-components": "^1.4.4",
     "vuex": "^3.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
-    "@vue/cli-plugin-typescript": "^3.4.0",
     "@vue/cli-service": "^3.4.0",
-    "@vue/eslint-config-typescript": "^4.0.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
-    "typescript": "~3.2.2",
     "vue-template-compiler": "^2.5.21"
   },
   "eslintConfig": {
@@ -34,12 +30,11 @@
     },
     "extends": [
       "plugin:vue/essential",
-      "eslint:recommended",
-      "@vue/typescript"
+      "eslint:recommended"
     ],
     "rules": {},
     "parserOptions": {
-      "parser": "@typescript-eslint/parser",
+      "parser": "babel-eslint",
       "experimentalDecorators": true
     }
   },
