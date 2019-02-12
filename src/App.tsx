@@ -1,6 +1,7 @@
 import StyledButton from "./components/test";
 import RestaurantsComponent from "./components/restaurants";
 import AppWrapper from "./components/app-wrapper";
+import { FunctionalComponent } from "./components/functional-comp.tsx";
 
 const App = {
   data() {
@@ -13,6 +14,7 @@ const App = {
       <AppWrapper>
         <RestaurantsComponent trueRenderProp={this.test}></RestaurantsComponent>
         <StyledButton onClick={() => this.myRenderProp()}>Test</StyledButton>
+        <FunctionalComponent initialCount={3}></FunctionalComponent>
       </AppWrapper>
     );
   },
