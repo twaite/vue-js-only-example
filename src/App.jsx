@@ -1,6 +1,14 @@
-import StyledButton from "./components/test";
-import RestaurantsComponent from "./components/restaurants";
-import AppWrapper from "./components/app-wrapper";
+import RestaurantsComponent from "./components/restaurants.jsx";
+import { injectGlobal } from 'vue-styled-components';
+
+const GlobalStyles = injectGlobal`
+  body {
+    margin: 0;
+    color: white;
+    background: #2d2c2a;
+    font-family: 'helvetica';
+  }
+`;
 
 const App = {
   data() {
@@ -10,17 +18,11 @@ const App = {
   },
   render() {
     return (
-      <AppWrapper>
+      <div>
+        <GlobalStyles/>
         <RestaurantsComponent trueRenderProp={this.test}></RestaurantsComponent>
-        <StyledButton onClick={() => this.myRenderProp()}>Test</StyledButton>
-      </AppWrapper>
+      </div>
     );
-  },
-
-  methods: {
-    myRenderProp() {
-      console.log('test');
-    }
   },
 }
 
